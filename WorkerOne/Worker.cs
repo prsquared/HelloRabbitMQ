@@ -4,7 +4,7 @@ using RabbitMQ.Client.Events;
 using System.Text;
 using System.Threading;
 
-namespace WorkerOne
+namespace Worker
 {
     class Worker
     {
