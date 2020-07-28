@@ -31,8 +31,7 @@ namespace Worker
                     var message = Encoding.UTF8.GetString(body);
                     Console.WriteLine(" [x] Received => {0}", message);
 
-                    int dots = message.Split('.').Length - 1;
-                    Thread.Sleep(dots * 1000);
+                    Thread.Sleep(500);
 
                     Console.WriteLine(" [x] Done");
 
