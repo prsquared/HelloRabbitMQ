@@ -31,12 +31,11 @@ namespace Worker
                     var message = Encoding.UTF8.GetString(body);
                     Console.WriteLine(" [x] Received => {0}", message);
 
-                    Thread.Sleep(500);
+                    Thread.Sleep(5000);
 
                     Console.WriteLine(" [x] Done");
 
-                    // Note: it is possible to access the channel via
-                    //       ((EventingBasicConsumer)sender).Model here
+                   
                     channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
                 };
                 channel.BasicConsume(queue: "task_queue",
